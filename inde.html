@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok Accounts — Buy Premium & Verified</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --card: #12121a;
+    --border: #1e1e2a;
+    --text: #f4f4f5;
+    --muted: #a1a1aa;
+    --accent: #fe2c55;
+    --accent2: #25f4ee;
+    --gradient: linear-gradient(135deg, #fe2c55, #25f4ee);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .bg-glow {
+    position: fixed; inset: 0; z-index: -1;
+    background: 
+      radial-gradient(ellipse 80% 50% at 15% -10%, rgba(254,44,85,0.14), transparent),
+      radial-gradient(ellipse 60% 40% at 85% 5%, rgba(37,244,238,0.09), transparent);
+  }
+
+  /* NAV */
+  nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 18px 40px; position: sticky; top: 0;
+    background: rgba(10,10,15,0.88); backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border); z-index: 100;
+  }
+  .logo {
+    font-weight: 800; font-size: 1.3rem;
+    background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .nav-cta {
+    background: var(--gradient); color: #000; font-weight: 600;
+    padding: 10px 22px; border-radius: 999px; text-decoration: none; font-size: 0.9rem;
+    transition: 0.2s;
+  }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(254,44,85,0.35); }
+
+  /* HERO */
+  .hero { text-align: center; padding: 90px 20px 70px; max-width: 780px; margin: 0 auto; }
+  .badge {
+    display: inline-block; background: rgba(254,44,85,0.12);
+    border: 1px solid rgba(254,44,85,0.3); color: var(--accent);
+    font-size: 0.8rem; font-weight: 600; padding: 6px 14px; border-radius: 999px; margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-size: clamp(2.3rem, 5.5vw, 3.4rem); font-weight: 800;
+    line-height: 1.15; letter-spacing: -1.2px; margin-bottom: 18px;
+  }
+  .hero h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero p { color: var(--muted); font-size: 1.1rem; max-width: 500px; margin: 0 auto 32px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 28px; border-radius: 12px; font-weight: 600; font-size: 0.95rem;
+    text-decoration: none; transition: 0.25s; border: none; cursor: pointer;
+  }
+  .btn-primary { background: var(--gradient); color: #000; }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(254,44,85,0.4); }
+
+  /* SECTIONS */
+  .section { max-width: 1100px; margin: 0 auto; padding: 50px 20px; }
+  .section-title { text-align: center; font-size: 1.85rem; font-weight: 700; margin-bottom: 8px; }
+  .section-sub { text-align: center; color: var(--muted); margin-bottom: 40px; }
+
+  /* PRODUCT GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 18px;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 24px; transition: 0.3s; position: relative;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(254,44,85,0.35);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.35);
+  }
+  .card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+  .card .desc { color: var(--muted); font-size: 0.88rem; margin-bottom: 14px; min-height: 40px; }
+  .card .price {
+    font-size: 1.7rem; font-weight: 800;
+    background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+  }
+  .card .btn { width: 100%; justify-content: center; font-size: 0.9rem; padding: 11px; }
+
+  /* REVIEWS */
+  .reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .review {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 24px; transition: 0.3s;
+  }
+  .review:hover { border-color: rgba(37,244,238,0.3); }
+  .review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .avatar {
+    width: 46px; height: 46px; border-radius: 50%;
+    object-fit: cover; border: 2px solid rgba(254,44,85,0.3);
+  }
+  .review-name { font-weight: 600; font-size: 0.95rem; }
+  .stars { color: #fbbf24; font-size: 0.85rem; letter-spacing: 1px; }
+  .review p { color: var(--muted); font-size: 0.92rem; line-height: 1.55; }
+
+  /* THANKS */
+  .thanks {
+    text-align: center; padding: 70px 20px 90px;
+    background: linear-gradient(180deg, transparent, rgba(254,44,85,0.06));
+  }
+  .thanks h2 {
+    font-size: 2rem; font-weight: 800; margin-bottom: 12px;
+    background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .thanks p { color: var(--muted); max-width: 480px; margin: 0 auto 28px; font-size: 1.05rem; }
+
+  footer {
+    text-align: center; padding: 30px; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.88rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate { animation: fadeUp 0.6s ease forwards; }
+
+  @media (max-width: 600px) {
+    nav { padding: 14px 18px; }
+    .hero { padding: 60px 16px 50px; }
+  }
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+
+<nav>
+  <div class="logo">TikTok Accounts</div>
+  <a href="https://t.me/naeeem_gafree" target="_blank" class="nav-cta">Contact Seller</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">✦ Trusted TikTok Account Shop</div>
+  <h1>Premium & Verified<br><span>TikTok Accounts</span></h1>
+  <p>Choose from normal accounts starting at $10 or get verified accounts from $300. Fast delivery via Telegram.</p>
+  <a href="https://t.me/naeeem_gafree" target="_blank" class="btn btn-primary">Message @naeeem_gafree</a>
+</section>
+
+<!-- NORMAL ACCOUNTS -->
+<section class="section">
+  <h2 class="section-title">Normal TikTok Accounts</h2>
+  <p class="section-sub">Clean accounts ready to use — starting from only $10</p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Starter Account</h3>
+      <p class="desc">Fresh account, basic setup, ready to customize.</p>
+      <div class="price">$10</div>
+      <a href="https://t.me/naeeem_gafree" target="_blank" class="btn btn-primary">Buy Now</a>
+    </div>
+
+    <div class="card">
+      <h3>Aged Account</h3>
+      <p class="desc">Older account with better trust score.</p>
+      <div class="price">$25</div>
+      <a href="https://t.me/naeeem_gafree" target="_blank" class="btn btn-primary">Buy Now</a>
+    </div>
+
+    <div class="card">
+      <h3>With Followers</h3>
+      <p class="desc">1K–5K real-looking followers included.</p>
+      <div class="price">$45</div>
+      <a href="https://t.me/naeeem_gafree" target="_blank" class="btn btn-primary">Buy Now</a>
+    </div>
+
+    <div class="card">
+      <h3>Growth Ready</h3>
+      <p class="desc">Aged + followers + good engagement history.</p>
+      <div class="price">$75</div>
+      <a href="https://t.me/naeeem_gafree" target="_blank" class="btn btn-primary">Buy Now</a>
+    </div>
+
+    <div class="card">
+      <h3>Premium Normal</h3>
+      <p class="desc">High quality aged account, strong foundation.</p>
+      <div class="price">$120</div>
+      <a href="https://t.me/naeeem_gafree" target="_blank" class="btn btn-primary">Buy Now</a>
+    </div>
+
+    <div class="card">
+      <h3>Pro Account</h3>
+      <p class="desc">Best normal tier — aged, followers & activity.</p>
+      <div class="price">$180</div>
+      <a href="https://t.me/naeeem_gafree" target="_blank" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- VERIFIED ACCOUNTS -->
+<section class="section">
+  <h2 class="section-title">Verified TikTok Accounts</h2>
+  <p class="section-sub">Official blue check accounts — starting from $300</p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Verified Basic</h3>
+      <p class="desc">Real verification badge, clean profile.</p>
+      <div class="price">$300</div>
+      <a href="https://t.me/naeeem_gafree" target="_blank" class="btn btn-primary">Buy Now</a>
+    </div>
+
+    <div class="card">
+      <h3>Verified + Followers</h3>
+      <p class="desc">Verified with solid follower count.</p>
+      <div class="price">$450</div>
+      <a href="https://t.me/naeeem_gafree" target="_blank" class="btn btn-primary">Buy Now</a>
+    </div>
+
+    <div class="card">
+      <h3>Verified Premium</h3>
+      <p class="desc">Strong verified account with good activity.</p>
+      <div class="price">$650</div>
+      <a href="https://t.me/naeeem_gafree" target="_blank" class="btn btn-primary">Buy Now</a>
+    </div>
+
+    <div class="card">
+      <h3>Verified Elite</h3>
+      <p class="desc">Top tier verified — high trust & reach.</p>
+      <div class="price">$900</div>
+      <a href="https://t.me/naeeem_gafree" target="_blank" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section">
+  <h2 class="section-title">What Buyers Say</h2>
+  <p class="section-sub">Real feedback from people who bought accounts</p>
+
+  <div class="reviews">
+    <div class="review">
+      <div class="review-header">
+        <img class="avatar" src="https://i.pravatar.cc/100?img=12" alt="avatar">
+        <div>
+          <div class="review-name">Marcus T.</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+      <p>Got a verified account for $300. Delivery was super fast and the account was exactly as described. Will buy again.</p>
+    </div>
+
+    <div class="review">
+      <div class="review-header">
+        <img class="avatar" src="https://i.pravatar.cc/100?img=32" alt="avatar">
+        <div>
+          <div class="review-name">Sophia R.</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+      <p>Started with a $25 aged account. Smooth process on Telegram and the seller was very helpful. Highly recommend!</p>
+    </div>
+
+    <div class="review">
+      <div class="review-header">
+        <img class="avatar" src="https://i.pravatar.cc/100?img=68" alt="avatar">
+        <div>
+          <div class="review-name">Jayden K.</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+      <p>Best place I’ve found for TikTok accounts. Bought the $75 growth ready one and it already had good engagement.</p>
+    </div>
+
+    <div class="review">
+      <div class="review-header">
+        <img class="avatar" src="https://i.pravatar.cc/100?img=47" alt="avatar">
+        <div>
+          <div class="review-name">Aaliyah M.</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+      <p>Verified account arrived quickly. Everything worked perfectly. Thank you @naeeem_gafree!</p>
+    </div>
+
+    <div class="review">
+      <div class="review-header">
+        <img class="avatar" src="https://i.pravatar.cc/100?img=15" alt="avatar">
+        <div>
+          <div class="review-name">Ethan P.</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+      <p>Honest seller. Clear communication and fair prices. My $45 account with followers was delivered in under an hour.</p>
+    </div>
+
+    <div class="review">
+      <div class="review-header">
+        <img class="avatar" src="https://i.pravatar.cc/100?img=25" alt="avatar">
+        <div>
+          <div class="review-name">Nora L.</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+      <p>Very satisfied. The whole process felt professional and safe. Will definitely order another account soon.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THANKS -->
+<section class="thanks">
+  <h2>Thank You for Visiting</h2>
+  <p>Ready to get your TikTok account? Reach out now on Telegram and we’ll take care of everything quickly.</p>
+  <a href="https://t.me/naeeem_gafree" target="_blank" class="btn btn-primary">Chat with @naeeem_gafree</a>
+</section>
+
+<footer>
+  <p>© 2026 TikTok Accounts · Contact: <a href="https://t.me/naeeem_gafree" target="_blank">@naeeem_gafree</a></p>
+</footer>
+
+</body>
+</html>
